@@ -28,6 +28,17 @@ namespace LeetSpeak.Objects
         {
           output.Add("1");
         }
+        else if (_input[i] == "s")
+        {
+          if(_input[ i - 1 ] == " ")
+          {
+            output.Add("s");
+          }
+          else
+          {
+            output.Add("z");
+          }
+        }
         else
         {
           output.Add(_input[i]);
