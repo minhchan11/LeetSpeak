@@ -11,8 +11,7 @@ namespace LeetSpeak.Objects
     {
       // Arrange
       string inputString = " sasaeo1 ss";
-      char[] testList = inputString.ToCharArray();
-      Translate testTranslate = new Translate(testList);
+      Translate testTranslate = new Translate(inputString);
       string outputString = testTranslate.Rules();
       //Act
       string verifyString = " saza301 sz";

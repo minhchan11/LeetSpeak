@@ -6,11 +6,13 @@ namespace LeetSpeak.Objects
 {
   public class Translate
   {
-    private char[] _input = new char[]{};
+    private string _inputSentence;
+    public char[] _input = new char[]{};
     StringBuilder outputString = new StringBuilder();
 
-    public Translate(char[] newList)  {
-      _input = newList;
+    public Translate(string inputSentence)  {
+      _inputSentence = inputSentence;
+      _input = inputSentence.ToCharArray();
     }
 
     //Make the "prototype"

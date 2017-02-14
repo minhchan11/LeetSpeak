@@ -15,8 +15,7 @@ namespace LeetSpeakApp
       };
       Post["/results"] = _ => {
         string userInput = Request.Form["sentence"];
-        char[] testList = userInput.ToCharArray();
-        Translate testTranslate = new Translate(testList);
+        Translate testTranslate = new Translate(userInput);
         string outputString = testTranslate.Rules();
         return View["results.cshtml",outputString];
       };
