@@ -12,6 +12,11 @@ namespace LeetSpeak.Objects
     public Translate(List<string> newList)  {
       _input = newList;
     }
+
+    public string inputSplit
+    {
+
+    }
     //Make the "prototype"
     public List<string> Rules()
     {
