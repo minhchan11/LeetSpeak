@@ -7,16 +7,17 @@ namespace LeetSpeak.Objects
   {
     // test code here
     [Fact]
-    public void Rules_LetterE_True()
+    public void Rules_charArray_True()
     {
       // Arrange
-      List<string> testList = new List<string>{" ","s","a","s","a","e","o", "I", " ", "s","s"};
+      string inputString = " sasaeo1 ss";
+      char[] testList = inputString.ToCharArray();
       Translate testTranslate = new Translate(testList);
-      List<string> testResult = testTranslate.Rules();
+      string outputString = testTranslate.Rules();
       //Act
-      List<string> verifyList = new List<string>{" ","s","a","z","a","3","0","1", " ", "s","z"};
+      string verifyString = " saza301 sz";
       //Assert
-      Assert.Equal(verifyList, testResult);
+      Assert.Equal(outputString,verifyString);
     }
   }
 }
